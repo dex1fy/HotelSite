@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hotel</title>
+    <link rel="stylesheet" href="/src/shared/css/main.css">
+    <script type="module" src="/src/shared/js/forTest.js" defer></script>
+    <script type="module" src="/src/pages/registration/registration.js" defer></script>
+    <script type="module" src="/src/pages/auth/auth.js" defer></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
+    <script src="/src/shared/js/main.js"></script>
+</head>
+
+<body>
+    <!-- <h1 style="color: black;">Hello user: <span id="forAuthTest" style="color: black;"></span> </h1> -->
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/assets/images/Логотип.svg" alt="лого" class="header__logo">
+            </div>
+
+            <div class="header__right">
+                <nav class="header__nav">
+                    <a href="#!" class="nav__link">об отеле</a>
+                    <a href="#!" class="nav__link">номера</a>
+                    <a href="#!" class="nav__link">забронировать</a>
+                    <a href="#!" class="nav__link">контакты</a>
+                </nav>
+
+                <a href="/src/pages/auth/LoginPage.html">
+                    <button type="login" class="btn">войти</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <section class="welcome">
+            <div class="container">
+                <div class="welcome__inner__wrapper">
+                    <h2 class="welcome__title"> SouthPark - Ваш дом вдали от дома</h2>
+                    <h3 class="welcome__subtitle">Приветствуем! Hello! Salut! Hola!</h3>
+
+
+                    <p class="description">Наши отели и курорты – это воплощение стиля, современности и инноваций в
+                        сфере
+                        гостеприимства.
+                        Мы создаем пространства, где каждая деталь продумана: от элегантного дизайна до кулинарных
+                        концепций
+                        мирового уровня.
+                        Наши гости наслаждаются не только комфортом, но и уникальными впечатлениями – будь то
+                        захватывающие
+                        мероприятия,
+                        единение с природой или искренняя забота, которая делает каждое путешествие по-настоящему
+                        особенным.
+                    </p>
+                    <a href="#!"><button type="login" class="btn">узнать больше</button></a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- <section class="info_hotel">
+            <img src="/assets/images/info.svg" alt="Фото отеля" class="hero-image">
+                <div class="blue-box">
+                    <p class="description">Наш отель расположен в уютном трехэтажном здании.<br>
+                        На первом этаже вас встретит просторная ресепшен-зона и уютная гостиная с мягкими диванами.
+                        Здесь вы можете отдохнуть после путешествия, насладиться свежезаваренным чаем или кофе и
+                        почувствовать атмосферу домашнего уюта.</p>
+
+                    <div class="amenities-grid">
+                        <div class="amenities-column">
+                            <div class="amenity-item">бассейн</div>
+                            <div class="amenity-item">спа и массаж</div>
+                            <div class="amenity-item">уроки серффинга</div>
+                            <div class="amenity-item">дайвинг и сноркелинг</div>
+                        </div>
+
+                        <div class="amenities-column">
+                            <div class="amenity-item">фитнес и йога</div>
+                            <div class="amenity-item">экскурсии на лодке</div>
+                            <div class="amenity-item">конференц-зал</div>
+                            <div class="amenity-item">пляж</div>
+                        </div>
+                    </div>  
+                </div>
+        </section>  -->
+
+
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="/assets/images/slider1.webp" alt="Slide 1"></div>
+                <div class="slide"><img src="/assets/images/slider2.webp" alt="Slide 2"></div>
+                <div class="slide"><img src="/assets/images/slider3.jpg" alt="Slide 3"></div>
+                <div class="slide"><img src="/assets/images/slider4.jpg" alt="Slide 4"></div>
+                <div class="slide"><img src="/assets/images/slider5.jpeg" alt="Slide 5"></div>
+            </div>
+
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <button class="next" aria-label="Next slide">&#10095;</button>
+        </div>
+
+
+        <div class="map-wrapper">
+            <div id="map-test" class="map"></div>
+        </div>
+
+    </main>
+</body>
+
+</html>

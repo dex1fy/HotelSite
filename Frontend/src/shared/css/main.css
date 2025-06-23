@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@font-face {
+    font-family: Vetrino;
+    src: url(/assets/fonts/Vetrino.otf);
+}
+
+@font-face {
+    font-family: Soyuz;
+    src: url(/assets/fonts/Soyuz\ Grotesk\ Bold.otf);
+}
+
+@font-face {
+    font-family: NEXT ART_Bold;
+    src: url(/assets/fonts/NEXT\ ART_Bold.otf);
+}
+
+@font-face {
+    font-family: eskal;
+    src: url(/assets/fonts/eskal_font4you.ttf);
+}
+
+:root {
+    --primary-blue-color: #343F6A
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    background-color: var(--primary-blue-color);
+    padding: 30px 0;
+    color: black;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo {
+    height: 30px;
+    width: auto;
+}
+
+.header__nav {
+    display: flex;
+    gap: 30px;
+    justify-content: right;
+
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.nav__link {
+    font-family: 'Soyuz';
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: transparent;
+    font-family: 'Montserrat';
+    border: 3px solid white;
+    border-radius: 20px;
+    border-color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* приветственная секция */
+.welcome__subtitle {
+    font-family: 'NEXT ART';
+    color: white;
+    font-size: 40px;
+}
+
+.welcome__title {
+    font-family: 'eskal';
+    letter-spacing: 5px;
+    color: white;
+    font-size: 30px;
+}
+
+
+.description {
+    color: white;
+    font-family: 'Jura';
+    font-size: 16px;
+}
+
+.welcome__inner__wrapper {
+    width: 1320px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 100px;
+}
+
+.welcome {
+    padding: 250px 0;
+    margin-top: -97px;
+    background-image: url("/assets/images/welcome-img.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px;
+}
+
+/* информация об отеле */
+
+
+.hero-image {
+    width: 100%;
+    height: 618px;
+    object-fit: cover;
+
+}
+
+.blue-box {
+    position: absolute;
+    top: 130%;
+    right: 40px;
+    transform: translateY(-50%);
+    background-color: #343F6A;
+    color: white;
+    padding: 40px;
+    max-width: 746px;
+    max-height: 1000px;
+    text-align: center;
+}
+
+
+.description {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: 'Jura';
+}
+
+.amenities-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.amenities-column {
+    flex: 1;
+}
+
+.amenity-item {
+    padding: 12px 0;
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+    font-family: 'Rubik';
+}
+
+.amenity-item:before {
+    content: "•";
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+
+.hero-image {
+    filter: brightness(70%);
+} 
+
+
+.container__hero{
+    background-color: #343F6A;
+    max-width: 1330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 15px;
+    margin: 0 auto;
+}  
+
+/* карта */
+.map-wrapper {
+    max-width: 1920px;
+    height: 620px;
+    margin: 0;
+
+}
+
+.map {
+    width: 2114px;
+    height: 620px;
+    background-color: #343F6A;
+}
+
+/* слайдер */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 80vh;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}

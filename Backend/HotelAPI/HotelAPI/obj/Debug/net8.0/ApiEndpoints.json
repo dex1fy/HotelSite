@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "HotelAPI.Controllers.AuthenticationController",
+    "Method": "RegisterGuestAsync",
+    "RelativePath": "api/Authentication/RegisterGuest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "HotelAPI.Models.DTOs.Registration.RegistrationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
