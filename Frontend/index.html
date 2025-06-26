@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hotel</title>
     <link rel="stylesheet" href="/src/shared/css/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script type="module" src="/src/shared/js/forTest.js" defer></script>
     <script type="module" src="/src/pages/registration/registration.js" defer></script>
     <script type="module" src="/src/pages/auth/auth.js" defer></script>
@@ -65,34 +66,80 @@
             </div>
         </section>
 
-        <!-- <section class="info_hotel">
-            <img src="/assets/images/info.svg" alt="Фото отеля" class="hero-image">
-                <div class="blue-box">
-                    <p class="description">Наш отель расположен в уютном трехэтажном здании.<br>
-                        На первом этаже вас встретит просторная ресепшен-зона и уютная гостиная с мягкими диванами.
-                        Здесь вы можете отдохнуть после путешествия, насладиться свежезаваренным чаем или кофе и
-                        почувствовать атмосферу домашнего уюта.</p>
 
-                    <div class="amenities-grid">
-                        <div class="amenities-column">
-                            <div class="amenity-item">бассейн</div>
-                            <div class="amenity-item">спа и массаж</div>
-                            <div class="amenity-item">уроки серффинга</div>
-                            <div class="amenity-item">дайвинг и сноркелинг</div>
-                        </div>
+        <section class="hotel-info">
+            <div class="hero-container">
+                <img src="/assets/images/info.webp" alt="Фото отеля" class="hero-image">
+                <div class="overlay-card">
+                    <h2 class="description1">Уютный трёхэтажный отель с атмосферой домашнего тепла</h2>
+                    <p class="subdescription">На первом этаже вас встретит просторная ресепшен-зона и уютная гостиная с
+                        мягкими диванами. Отдохните после путешествия за чашечкой свежезаваренного кофе.</p>
 
-                        <div class="amenities-column">
-                            <div class="amenity-item">фитнес и йога</div>
-                            <div class="amenity-item">экскурсии на лодке</div>
-                            <div class="amenity-item">конференц-зал</div>
-                            <div class="amenity-item">пляж</div>
+                    <div class="amenities-section">
+                        <h3 class="amenities-title">Наши удобства</h3>
+                        <div class="amenities-grid">
+                            <div class="amenities-column">
+                                <div class="amenity-item">
+                                    <img src="/assets/images/бассейн.svg" alt="Бассейн" class="amenity-icon">
+                                    <span>Бассейн с подогревом</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <img src="/assets/images/спа.svg" alt="спа" class="amenity-icon">
+                                    <span>SPA и массаж</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <img src="/assets/images/серфинг.svg" alt="серфинг" class="amenity-icon">
+                                    <span>Уроки серфинга</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <img src="/assets/images/дайвинг.svg" alt="Дайвинг" class="amenity-icon">
+                                    <span>Дайвинг и сноркелинг</span>
+                                </div>
+                            </div>
+
+                            <div class="amenities-column">
+                                <div class="amenity-item">
+                                    <img src="/assets/images/фитнес.svg" alt="Фитнес" class="amenity-icon">
+                                    <span>Фитнес и йога</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <img src="/assets/images/экскурсии.svg" alt="Экскурсии" class="amenity-icon">
+                                    <span>Экскурсии на лодке</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <img src="/assets/images/зал.svg" alt="Конференц-зал" class="amenity-icon">
+                                    <span>Конференц-зал</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <img src="/assets/images/пляж.svg" alt="пляж" class="amenity-icon">
+                                    <span>Частный пляж</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
-        </section>  -->
+            </div>
+        </section>
 
+        <section class="restoran">
+            <div class="container">
+                <div class="restoran__img-wrapper">
+                    <img src="/assets/images/ресторан.jpg" alt="" class="restoran__img">
+                </div>
+                <div class="restoran__text">
+                    <h2 class="restoran__title">Вкус, который становится <span>воспоминанием</span> </h2>
+                    <p class="restoran__desc">Наш шеф-повар превращает каждое блюдо в кулинарный шедевр.
+                        Авторские дегустационные меню, изысканные винные пары и безупречный сервис.
+                        Гастрономическое путешествие, которое запомнится надолго.</p>
+                    <img src="/assets/images/повара.jpg" alt="" class="restoran__pic">
+                </div>
+            </div>
+        </section>
 
         <div class="slider">
+            <div class="container">
+                <h2 class="hotel__title">Моменты, которые хочется сохранить<span> навсегда</span> </h2>
+            </div>
             <div class="slides">
                 <div class="slide"><img src="/assets/images/slider1.webp" alt="Slide 1"></div>
                 <div class="slide"><img src="/assets/images/slider2.webp" alt="Slide 2"></div>
@@ -106,9 +153,37 @@
         </div>
 
 
+
+
         <div class="map-wrapper">
             <div id="map-test" class="map"></div>
         </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__contacts"></div>
+                <img src="/assets/images/Логотип.svg" alt="лого" class="footer__logo">
+                <a class="footer__link footer__link-mail" href="mailto:southparkhotel@mail.ru"
+                    southparkhotel@mail.ru></a>
+                <a href="#!" class="footer__link footer__link-phone">+7 995 463 83 84</a>
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-facebook-circle'></i>
+
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__list-title">Об отеле</li>
+                        <ul class="footer__inner-list">
+                            <li class="footer__list-item"></li>
+                        </ul>
+                        <li class="footer__list-title">Профиль</li>
+                        <li class="footer__list-title">Номера</li>
+                    </ul>
+                </nav>
+
+                <div class="footer__pay"></div>
+            </div>
+        </footer>
+
 
     </main>
 </body>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {}
+    "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {
+    "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
         "projectName": "HotelAPI",
-        "projectPath": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+        "projectPath": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
         "packagesPath": "C:\\Users\\dexify\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\obj\\",
+        "outputPath": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Supabase": {
               "target": "Package",
               "version": "[1.1.1, )"
@@ -91,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

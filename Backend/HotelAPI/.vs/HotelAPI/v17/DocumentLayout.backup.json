@@ -1,42 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\models\\dtos\\registrationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\models\\dtos\\registrationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\controllers\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\controllers\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\models\\entities\\guestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\models\\entities\\guestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\hotelapi\\backend\\hotelapi\\hotelapi\\hotelapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\hotelapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|c:\\users\\dexify\\desktop\\projects\\backend\\hotelapi\\hotelapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E43B8C2-7110-40E2-B26A-77106F9697A7}|HotelAPI\\HotelAPI.csproj|solutionrelative:hotelapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,129 +13,21 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 278,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Program.cs",
-              "RelativeDocumentMoniker": "HotelAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Program.cs",
-              "RelativeToolTip": "HotelAPI\\Program.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwBwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T00:56:13.228Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegistrationRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Models\\DTOs\\RegistrationRequest.cs",
-              "RelativeDocumentMoniker": "HotelAPI\\Models\\DTOs\\RegistrationRequest.cs",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Models\\DTOs\\RegistrationRequest.cs",
-              "RelativeToolTip": "HotelAPI\\Models\\DTOs\\RegistrationRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "HotelAPI\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "HotelAPI\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T00:46:51.944Z",
+              "WhenOpened": "2025-06-26T18:45:47.68Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GuestModel.cs",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Models\\Entities\\GuestModel.cs",
-              "RelativeDocumentMoniker": "HotelAPI\\Models\\Entities\\GuestModel.cs",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Models\\Entities\\GuestModel.cs",
-              "RelativeToolTip": "HotelAPI\\Models\\Entities\\GuestModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T00:42:30.251Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "HotelAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\appsettings.Development.json",
-              "RelativeToolTip": "HotelAPI\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-17T00:37:08.182Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "HotelAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\appsettings.json",
-              "RelativeToolTip": "HotelAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-17T00:37:06.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Service.cs",
-              "RelativeDocumentMoniker": "HotelAPI\\Service.cs",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Service.cs",
-              "RelativeToolTip": "HotelAPI\\Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T00:37:02.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Authorization.cs",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Controllers\\Authorization.cs",
-              "RelativeDocumentMoniker": "HotelAPI\\Controllers\\Authorization.cs",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Controllers\\Authorization.cs",
-              "RelativeToolTip": "HotelAPI\\Controllers\\Authorization.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T00:26:26.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "HotelAPI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "HotelAPI\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-17T00:56:51.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HotelAPI.csproj",
-              "DocumentMoniker": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
-              "RelativeDocumentMoniker": "HotelAPI\\HotelAPI.csproj",
-              "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
-              "RelativeToolTip": "HotelAPI\\HotelAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-17T00:56:46.252Z"
             }
           ]
         }

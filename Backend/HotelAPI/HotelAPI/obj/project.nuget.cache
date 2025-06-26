@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xH6cWSynOpM=",
+  "dgSpecHash": "3F83N5EL1Ac=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dexify\\Desktop\\HotelAPI\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+  "projectFilePath": "C:\\Users\\dexify\\Desktop\\projects\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dexify\\.nuget\\packages\\functions-csharp\\1.3.2\\functions-csharp.1.3.2.nupkg.sha512",
     "C:\\Users\\dexify\\.nuget\\packages\\gotrue-csharp\\4.2.7\\gotrue-csharp.4.2.7.nupkg.sha512",
