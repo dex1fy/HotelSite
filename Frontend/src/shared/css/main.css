@@ -444,7 +444,7 @@
 
 
 /* фильтры */
-.date-filters {
+/* .date-filters {
     display: flex;
     gap: 20px;
     align-items: flex-end;
@@ -503,6 +503,75 @@
     height: 40px;
     transition: background 0.3s;
 }
+ */
 
 
+.date-filters {
+    display: flex;
+    gap: 15px; /* Уменьшил промежуток для компактности */
+    align-items: flex-end;
+    padding: 20px;
+    background: white;
+    border-radius: 100px;
+    margin: 0 auto 20px; /* Центрирование по горизонтали */
+    flex-wrap: nowrap; /* Запрет переноса на новую строку */
+    width: 890px; /* Фиксированная ширина */
+    height: 110px; /* Фиксированная высота */
+    box-sizing: border-box; /* Чтобы padding не увеличивал размер */
+    justify-content: center; /* Центрирование элементов внутри */
+    margin-bottom: -110px;
+    position: relative; 
+    z-index: 100;
+    top: -50px;
+}
 
+.date-filters > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0; 
+    text-align: center;
+}
+
+.date-filters label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    white-space: nowrap; 
+}
+
+.date-filters input {
+    padding: 8px 12px; 
+    border: 2px solid var(--primary-blue-color);
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; 
+    height: 56px; 
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+.date-filters input[type="date"] {
+    min-width: 160px; 
+}
+
+.date-filters input[type="number"] {
+    width: 70px; 
+}
+
+.date-filters button {
+    background: #343F6A;
+    color: white;
+    border: none;
+    padding: 0 20px; 
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; 
+    font-weight: 700;
+    cursor: pointer;
+    height: 56px; 
+    transition: background 0.3s;
+    white-space: nowrap; 
+    margin-left: 10px; 
+}
