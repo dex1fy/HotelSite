@@ -1,4 +1,6 @@
 ﻿
+using HotelAPI.Models.Entities;
+
 namespace HotelAPI.Models.DTOs
 {
 
@@ -18,6 +20,11 @@ namespace HotelAPI.Models.DTOs
         public bool Status { get; set; }
 
         public int Guests { get; set; }
+
+        public int Price { get; set; }
+        public int Capacities { get; set; }
+
+        public List<AmenityDto> Amenities { get; set; }
 
     }
 }

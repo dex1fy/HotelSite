@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!roomsResponse.ok) throw new Error("Ошибка загрузки комнат");
         allRooms = await roomsResponse.json();
 
-      
         const bookingsResponse = await fetch(
             "http://localhost:5291/api/Reservation/GetAllReservations"
         );
@@ -17,6 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("Ошибка загрузки бронирований");
         allBookings = await bookingsResponse.json();
         console.log(allBookings);
+        console.log(allRooms);
 
         renderRooms(allRooms);
 
@@ -96,8 +96,16 @@ function renderRooms(rooms) {
                 <p>Тип: ${room.roomTypeName}</p>
                 <p>Этаж: ${room.floor}</p>
                 <p>Вместимость: ${room.guests} гостей</p>
-                <p>${room.description}</p>
-        
+                <p>Описание: ${room.description}</p>
+                <p>Вместимость: ${room.capacities}</p>
+                <p>Цена: ${room.price} руб./ночь</p>
+                <div class="amenities-section">
+                    <h4>Удобства:</h4>
+                    <ul>
+                        ${room.amenities.map(a => `<li>${a.name}</li>`).join('') || '<li>Нет удобств</li>'}
+                    </ul>
+                </div>
+                <button class="btn btn-primary book-btn" data-room-id="${room.id}">Забронировать</button>
             </div>
         </div>
     `

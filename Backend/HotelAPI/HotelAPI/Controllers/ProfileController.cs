@@ -2,6 +2,7 @@
 using HotelAPI.Models.Entities;
 using HotelAPI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Supabase.Core.Extensions;
 
 namespace HotelAPI.Controllers
 {
@@ -16,22 +17,15 @@ namespace HotelAPI.Controllers
         }
 
         [HttpGet("GetUser")]
-        public async Task<IActionResult> GetUser()
+        public async Task<IActionResult> GetUser(string email)
         {
             var supabaseClient = await _supabaseService.InitSupabase();
 
-            var response = await supabaseClient.From<GuestModel>().Get();
+            var response = await supabaseClient.From<GuestModel>().Where(g => g.GuestEmail == email).Single();
 
-            var userProf = response.Models.Select(r => new GuestResponse
-            {
-                GuestSurname = r.GuestSurname,
-                GuestName = r.GuestName,
-                GuestPatronymic = r.GuestPatronymic,
-                GuestEmail = r.GuestEmail,
-                GuestPhone = r.GuestPhone
-            });
+            var user = new GuestResponse { GuestEmail = response.GuestEmail, GuestName = response.GuestName, GuestPatronymic = response.GuestPatronymic, GuestPhone = response.GuestPhone, GuestSurname = response.GuestSurname, Id = response.Id };
 
-            return Ok(userProf);
+            return Ok(user);
         }
     }
 }

@@ -15,18 +15,34 @@ namespace HotelAPI.Controllers
             _supabaseService = supabaseService;
         }
 
-        [HttpGet("GetAllRooms")] 
+        [HttpGet("GetAllRooms")]
         public async Task<IActionResult> GetAllRooms()
         {
             var supabaseClient = await _supabaseService.InitSupabase();
 
-            var response = await supabaseClient.From<RoomModel>().Get();
 
-            var roomTypeResponse = await supabaseClient.From<RoomTypeModel>().Get();
-            var roomTypeList = roomTypeResponse.Models;
+            var rooms = await supabaseClient.From<RoomModel>().Get();
+            var roomTypes = await supabaseClient.From<RoomTypeModel>().Get();
+            var amenities = await supabaseClient.From<AmenitiesModel>().Get();
+            var amenitiesInRoomType = await supabaseClient.From<AmenitiesRoomModel>().Get(); 
 
-            var rooms = response.Models.Select(r => {
-                var roomType = roomTypeList.FirstOrDefault(rt => rt.Id == r.RoomTypeId);
+
+            var result = rooms.Models.Select(r =>
+            {
+                var roomType = roomTypes.Models.FirstOrDefault(rt => rt.Id == r.RoomTypeId);
+
+                var roomAmenities = amenitiesInRoomType.Models
+                    .Where(art => art.IdRoom == r.RoomTypeId.ToString())  
+                    .Join(amenities.Models,
+                        art => art.IdAmenities,  
+                        a => a.Id,                          
+                        (art, a) => new AmenityDto         
+                        {
+                            Id = a.Id,
+                            Name = a.Name ?? string.Empty   
+                        })
+                    .ToList();
+
                 return new RoomsResponse
                 {
                     Id = r.Id,
@@ -36,10 +52,13 @@ namespace HotelAPI.Controllers
                     Description = r.Description,
                     Status = r.Status,
                     Guests = r.Guests,
+                    Price = roomType?.Price ?? 0,
+                    Capacities = roomType?.Capacities ?? 0,
+                    Amenities = roomAmenities 
                 };
-                }).ToList();
-            
-            return Ok(rooms);
+            }).ToList();
+
+            return Ok(result);
         }
     }
 }

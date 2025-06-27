@@ -10,9 +10,10 @@
     <script type="module" src="/src/shared/js/forTest.js" defer></script>
     <script type="module" src="/src/pages/registration/registration.js" defer></script>
     <script type="module" src="/src/pages/auth/auth.js" defer></script>
-
+    <script type="module" src="/src/shared/js/forTest.js" defer></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
     <script src="/src/shared/js/main.js"></script>
+    <script src="/profile.js" defer></script>
 </head>
 
 <body>
@@ -33,8 +34,13 @@
                 </nav>
 
                 <a href="/src/pages/auth/LoginPage.html">
-                    <button type="login" class="btn">войти</button>
+                    <button type="login" class="btn" id="auth-btn">войти</button>
                 </a>
+
+                <a href="Profile.html">
+                    <button  id="profile-ico">profile</button>
+                </a>
+            </a>
             </div>
         </div>
     </header>

@@ -1,32 +1,45 @@
-let allRooms = [];
-let allBookings = [];
-
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener('DOMContentLoaded', async () =>  {
     try {
-        const roomsResponse = await fetch(
-            "http://localhost:5291/api/Rooms/GetAllRooms"
+        let email = localStorage.getItem("email");
+        if (!email) throw new Error("Email не найден в localStorage");
+
+        const guestResponse = await fetch(
+            `http://localhost:5291/api/Profile/GetUser?email=${encodeURIComponent(
+                email
+            )}`
         );
-        if (!roomsResponse.ok) throw new Error("Ошибка загрузки комнат");
-        allRooms = await roomsResponse.json();
 
-      
-        const bookingsResponse = await fetch(
-            "http://localhost:5291/api/Reservation/GetAllReservations"
-        );
-        if (!bookingsResponse.ok)
-            throw new Error("Ошибка загрузки бронирований");
-        allBookings = await bookingsResponse.json();
-        console.log(allBookings);
+        if (!guestResponse.ok) throw new Error("Ошибка загрузки пользователя");
+        const guest = await guestResponse.json();
 
-        renderRooms(allRooms);
-
-        document
-            .getElementById("filterButton")
-            .addEventListener("click", filterAvailableRooms);
+        renderProfile(guest);
+        
     } catch (error) {
         console.error("Ошибка:", error);
-        document.getElementById("roomsContainer").innerHTML = `
-            <div class="error">${error.message}</div>
-        `;
     }
 });
+
+function renderProfile(guest) {
+    const container = document.getElementById("guest-container");
+    console.log(guest);
+    if (guest.length === 0) {
+        container.innerHTML = `
+            <div class="col-12">
+                <div class="alert alert-info">
+                    net profilya
+                </div>
+            </div>
+        `;
+        return;
+    }
+            
+    container.innerHTML = `
+    <div>
+        ${guest.guestName ? `<p>${guest.guestName}</p>` : ''}
+        ${guest.guestSurname ? `<p>${guest.guestSurname}</p>` : ''}
+        ${guest.guestPatronymic ? `<p>${guest.guestPatronymic}</p>` : ''}
+        ${guest.guestPhone ? `<p>${guest.guestPhone}</p>` : ''}
+        ${guest.guestEmail ? `<p>${guest.guestEmail}</p>` : ''}
+
+    </div>`
+}

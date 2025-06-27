@@ -22,7 +22,7 @@ namespace HotelAPI.Models.Entities
         [Column("description")]
         public string? Description { get; set; }
 
-        [Column("status")]
+        [Column("status")]  
         public bool Status { get; set; }
 
         [Column("guests")]
