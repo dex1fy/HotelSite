@@ -22,8 +22,16 @@ namespace HotelAPI.Controllers
             var supabaseClient = await _supabaseService.InitSupabase();
 
             var response = await supabaseClient.From<GuestModel>().Where(g => g.GuestEmail == email).Single();
+            //var reservation = await supabaseClient.From<ReservationsModel>().Where().Single();
 
-            var user = new GuestResponse { GuestEmail = response.GuestEmail, GuestName = response.GuestName, GuestPatronymic = response.GuestPatronymic, GuestPhone = response.GuestPhone, GuestSurname = response.GuestSurname, Id = response.Id };
+            var user = new GuestResponse { 
+                GuestEmail = response.GuestEmail, 
+                GuestName = response.GuestName,
+                GuestPatronymic = response.GuestPatronymic,
+                GuestPhone = response.GuestPhone, 
+                GuestSurname = response.GuestSurname,
+                Id = response.Id 
+            };
 
             return Ok(user);
         }

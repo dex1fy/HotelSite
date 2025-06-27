@@ -54,7 +54,8 @@ namespace HotelAPI.Controllers
                     Guests = r.Guests,
                     Price = roomType?.Price ?? 0,
                     Capacities = roomType?.Capacities ?? 0,
-                    Amenities = roomAmenities 
+                    Amenities = roomAmenities,
+                    photoPath = r.photoPath
                 };
             }).ToList();
 

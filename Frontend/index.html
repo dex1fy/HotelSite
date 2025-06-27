@@ -74,21 +74,20 @@
 
 
         <form action="/RoomsPage.html" method="GET" class="date-filters">
-            <div class="filter-group">
-                <label for="checkin-date">Дата заезда</label>
-                <input type="date" id="checkin-date" name="checkin" required />
-            </div>
-            <div class="filter-group">
-                <label for="checkout-date">Дата выезда</label>
-                <input type="date" id="checkout-date" name="checkout" required />
-            </div>
-            <div class="filter-group">
-                <label for="guests">Гости</label>
-                <input type="number" id="guests" name="guests" min="1" value="1" required />
-            </div>
-            <button type="submit" id="filterButton">Найти</button>
-        </form>
-
+    <div class="filter-group">
+        <label for="checkin-date">Дата заезда</label>
+        <input type="date" id="checkin-date" name="checkin" required />
+    </div>
+    <div class="filter-group">
+        <label for="checkout-date">Дата выезда</label>
+        <input type="date" id="checkout-date" name="checkout" required />
+    </div>
+    <div class="filter-group">
+        <label for="guests">Гости</label>
+        <input type="number" id="guests" name="guests" min="1" value="1" required />
+    </div>
+    <button type="submit" id="filterButton">Найти</button>
+</form>
         <section class="hotel-info">
             <div class="hero-container">
                 <img src="/assets/images/info.webp" alt="Фото отеля" class="hero-image">
