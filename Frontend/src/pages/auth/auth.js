@@ -3,17 +3,13 @@ import { SUPABASE_URL, SUPABASE_KEY } from "/src/shared/js/config.js";
 const { createClient } = supabase;
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-//ЛОГИН ПРОИСХОДИТ НА СТОРОНЕ ФРОНТА !!
-// получение полей email password с формы входа
 document.getElementById("login-form").addEventListener("submit", async (e) => {
-    e.preventDefault(); // страница не перезагрузится
+    e.preventDefault(); 
 
-    // получение полей
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const form = document.getElementById('login-form')
 
-    // подключение к супабейз
     const { data, error } = await supabaseClient.auth.signInWithPassword({
         email,
         password,
@@ -23,11 +19,13 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         document.getElementById('email').classList.add('invalid');
         document.getElementById('password').classList.add('invalid');
         form.reset();
-        alert("Произошла ошибка входа. Попробуйте снова"); // обработка ошибки
+        alert("Произошла ошибка входа. Попробуйте снова"); 
     } else {
         localStorage.setItem('email', email);
-        window.location.href = "../../../index.html";
+        if(email === "admin@mail.ru"){
+            window.location.href = "../../../AdminPanel.html";
+        }else{
+            window.location.href = "../../../index.html";
+        }
     }
 });
-
-

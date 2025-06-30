@@ -24,8 +24,10 @@ namespace HotelAPI.Controllers
             var rooms = await supabaseClient.From<RoomModel>().Get();
             var roomTypes = await supabaseClient.From<RoomTypeModel>().Get();
             var amenities = await supabaseClient.From<AmenitiesModel>().Get();
-            var amenitiesInRoomType = await supabaseClient.From<AmenitiesRoomModel>().Get(); 
+            var amenitiesInRoomType = await supabaseClient.From<AmenitiesRoomModel>().Get();
 
+            var imagesResponse = await supabaseClient.From<ImageModel>().Get();
+            var images = imagesResponse.Models;
 
             var result = rooms.Models.Select(r =>
             {
@@ -55,11 +57,14 @@ namespace HotelAPI.Controllers
                     Price = roomType?.Price ?? 0,
                     Capacities = roomType?.Capacities ?? 0,
                     Amenities = roomAmenities,
-                    photoPath = r.photoPath
+                    Images = images.Where(img => img.RoomId == r.Id).Select(img => img.ImageUrl).ToList()
                 };
             }).ToList();
 
+            
+
             return Ok(result);
         }
+
     }
 }

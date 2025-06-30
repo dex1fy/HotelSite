@@ -7,19 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (email && element) {
         element.textContent = email;
     } else {
-        element.textContent = 'Гость'; // или другое значение по умолчанию
+        element.textContent = 'Гость'; 
     }
 });
 
 
-// ТЕСТОВЫЙ ФАЙЛ. ПРОВЕРЯЮ КАК РАБОТАЕТ ВХОД. ПОСЛЕ ВХОДА КНОПКА ВХОДА ДОЛЖНА МЕНЯТЬСЯ НА КАКОЙ-ЛИБО ДРУГОЙ ЭЛЕМЕНТ. 
+
 function checkAuth(){
-    const email = localStorage.getItem('email'); // ПОЛУЧАЕМ ТОКЕН
+    const email = localStorage.getItem('email'); 
     console.log(email)
     const btn = document.getElementById('auth-btn');
     const profIcon = document.getElementById('profile-ico');
 
-    if(email){ // ЕСЛИ ТОКЕН ЕСТЬ - ТО ОТОБРАЖАЕМ Х1 ЗАГЛУШКУ
+    if(email){ 
         btn.style.display = 'none';
         profIcon.style.display = 'block';
     }else{

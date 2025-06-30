@@ -15,5 +15,10 @@ namespace HotelAPI.Models.DTOs
         public DateOnly CheckOutDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        public string Email { get; set; }
+
+        public int RoomNumber { get; set; }
+
     }
 }

@@ -1,3 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Элементы интерфейса
+    const authBtn = document.getElementById("auth-btn");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const profileBtn = document.getElementById("profile-ico");
+    const headerActions = document.querySelector(".header-actions");
+    
+    // Проверка авторизации
+    const isAuthenticated = localStorage.getItem('email') !== null;
+    
+    // Обновление интерфейса
+    function updateAuthUI() {
+        if (isAuthenticated) {
+            // Показываем кнопку выхода и иконку профиля
+            authBtn.style.display = 'none';
+            headerActions.style.display = 'flex';
+        } else {
+            // Показываем кнопку входа
+            authBtn.style.display = 'block';
+            headerActions.style.display = 'none';
+        }
+    }
+    
+    // Обработчик кнопки выхода
+    logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();  
+        localStorage.removeItem('email'); 
+        window.location.href = 'index.html';
+    });
+    
+    // Инициализация
+    updateAuthUI();
+});
+
+
 function init(){
     let map = new ymaps.Map('map-test', {
         center: [41.3867211227208,2.195605847998997],

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --primary-blue-color: #343F6A
+}
+
+
+.reservations-section {
+  margin: 2rem 0;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: #333;
+}
+
+.reservations-section h4 {
+  font-family: "Montserrat";
+  font-size: 46px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table thead th {
+  text-align: center;
+  padding: 0.75rem;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 500;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--primary-blue-color);
+}
+
+.table tbody td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e5ff;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+.delete-btn {
+  background: #ffcfcf;
+  color: red;
+  border: none;
+  padding: 0 20px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 56px;
+  transition: background 0.3s;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+
+.table tbody tr:hover {
+  background-color: #e0e5ff;
+}
+
+.btn {
+    background-color: transparent;
+    font-family: 'Montserrat';
+    border: 3px solid white;
+    border-radius: 20px;
+    border-color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}

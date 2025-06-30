@@ -30,10 +30,33 @@ namespace HotelAPI.Controllers
                 CheckInDate = r.CheckInDate,
                 CheckOutDate = r.CheckOutDate,
                 CreatedAt = r.CreatedAt
-                
+
             });
 
-        return Ok(reservation);
+            return Ok(reservation);
         }
+
+        [HttpPost("AddReservation")]
+        public async Task<IActionResult> AddReservation([FromBody] ReservationResponse request)
+        {
+            var supabaseClient = await _supabaseService.InitSupabase();
+            var response = await supabaseClient.From<ReservationsModel>().Get();
+            var guest = await supabaseClient.From<GuestModel>().Where(g => g.GuestEmail == request.Email).Single();
+
+            var reservationsModel = new ReservationsModel
+            {
+                Id = Guid.NewGuid(),
+                GuestId = guest.Id,
+                RoomId = request.RoomId,
+                CheckInDate = request.CheckInDate,
+                CheckOutDate = request.CheckOutDate,
+                CreatedAt = request.CreatedAt
+            };
+
+            var reservation = await supabaseClient.From<ReservationsModel>().Insert(reservationsModel);
+
+            return Ok(new {message = "vso ok"});
+        }
+
     }
 }

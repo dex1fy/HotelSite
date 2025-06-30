@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rooms</title>
-        <link rel="stylesheet" href="/src/shared/css/main.css">
-        <script type="module" src="/rooms.js" defer></script>
-    </head>
-    <body>
-        <div class="date-filters">
-            <div class="filter-group">
-                <label for="checkin-date">Дата заезда</label>
-                <input type="date" id="checkin-date" name="checkin" required />
-            </div>
-            <div class="filter-group">
-                <label for="checkout-date">Дата выезда</label>
-                <input type="date" id="checkout-date" name="checkout" required />
-            </div>
-            <div class="filter-group">
-                <label for="guests">Гости</label>
-                <input type="number" id="guests" name="guests" min="1" value="1" required />
-            </div>
-            <button type="button" id="filterButton">Найти</button>
-        </div>
 
-        <div id="roomsContainer" class="row"></div>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooms</title>
+    <link rel="stylesheet" href="/rooms.css">
+    <script type="module" src="/rooms.js" defer></script>
+</head>
+
+<body>
+
+    
+    <div class="date-filters">
+        <div class="filter-group">
+            <label for="checkin-date">Дата заезда</label>
+            <input type="date" id="checkin-date" name="checkin" required />
+        </div>
+        <div class="filter-group">
+            <label for="checkout-date">Дата выезда</label>
+            <input type="date" id="checkout-date" name="checkout" required />
+        </div>
+        <div class="filter-group">
+            <label for="guests">Гости</label>
+            <input type="number" id="guests" name="guests" min="1" value="1" required />
+        </div>
+        <button type="button" id="filterButton">Найти</button>
+    </div>
+
+    <div id="roomsContainer" class="row"></div>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Подтверждение бронирования</h2>
+            <div id="modalContent">
+                <p><strong>Номер комнаты:</strong> <span id="modalRoomNumber"></span></p>
+                <p><strong>Дата заезда:</strong> <span id="modalCheckin"></span></p>
+                <p><strong>Дата отъезда:</strong> <span id="modalCheckout"></span></p>
+                <p><strong>Количество гостей:</strong> <span id="modalGuests"></span></p>
+            </div>
+            <button id="confirmBooking" class="btn btn-primary">Подтвердить бронирование</button>
+        </div>
+    </div>
+
+</body>
+
 </html>

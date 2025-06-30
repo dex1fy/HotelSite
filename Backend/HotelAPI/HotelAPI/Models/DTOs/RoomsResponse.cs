@@ -25,8 +25,8 @@ namespace HotelAPI.Models.DTOs
         public int Capacities { get; set; }
 
         public List<AmenityDto> Amenities { get; set; }
-  
-        public string photoPath { get; set; }
+
+        public List<string> Images { get; set; }
 
     }
 }

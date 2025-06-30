@@ -28,7 +28,6 @@ namespace HotelAPI.Models.Entities
         [Column("guests")]
         public int Guests { get; set; }
 
-        [Column("photo_path")]
-        public string photoPath { get; set; }
+
     }
 }
