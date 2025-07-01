@@ -232,14 +232,6 @@
     transform: scale(1.2);
 }
 
-.room-info {
-    padding: 30px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Montserrat';
-}
 
 .room-info h3 {
     margin: 0 0 12px 0;
@@ -282,7 +274,7 @@
 }
 
 .book-btn {
-    width: 100%;
+    width: 810px;
     padding: 12px;
     background: #343F6A;
     color: white;
@@ -322,12 +314,12 @@
     mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>');
 }
 
+
 .date-filters {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    padding: 40px;
     background: #343F6A;
     margin: 0;
     width: 100%;
@@ -340,44 +332,92 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.filters-center {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 body {
     padding-top: 150px;
 }
 
 
-.date-filters>div {
-    position: relative;
-    display: inline-block;
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 24px;
+    color: white; 
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 15px;
+    position: absolute;
+    left: 1720px;
+}
+
+.right-btn {
+    background-color: transparent;
+    font-family: 'Montserrat';
+    border: 3px solid white;
+    border-radius: 20px;
+    border-color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    white-space: nowrap; 
+}
+
+
+.profile-btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.btn:hover {
+    background-color: white;
+    color: black;
 }
 
 
 .date-filters label {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 50%;
     top: 8px;
+    transform: translateX(-50%);
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    color: #666;
+    color: blueviolet;
     pointer-events: none;
     transition: all 0.2s ease;
-    text-align: center;
-    width: 100%;
-    padding: 0 16px;
-    box-sizing: border-box;
-}
-
-.date-filters input:focus+label,
-.date-filters input:not(:placeholder-shown)+label {
-    top: 4px;
-    font-size: 10px;
-    color: var(--primary-blue-color);
-    left: 50%;
-    transform: translateX(-50%);
     width: auto;
-    padding: 0 8px;
+    white-space: nowrap;
     background: white;
+    padding: 0 8px;
 }
 
 .date-filters input {
@@ -394,7 +434,19 @@ body {
     text-align: center;
 }
 
-.date-filters button {
+.date-filters input:focus + label,
+.date-filters input:not(:placeholder-shown) + label {
+    top: 4px;
+    font-size: 10px;
+    color: var(--primary-blue-color);
+}
+
+.filter-group {
+    position: relative;
+    display: inline-block;
+}
+
+.btn {
     background-color: transparent;
     border: 3px solid white;
     border-radius: 20px;
@@ -412,7 +464,119 @@ body {
     margin-left: 10px;
 }
 
-.date-filters button:hover{
+
+.button-find:hover {
     background-color: white;
     color: black;
+}
+
+.alert-info {
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+/* Стили для кнопки информации */
+.info-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #343F6A;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.info-btn:hover {
+    background: #4a5a9a;
+    transform: scale(1.1);
+}
+
+/* Стили для модального окна информации */
+.info-modal {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.info-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: none;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    animation: modalOpen 0.3s ease-out;
+    font-family: 'Montserrat';
+}
+
+.info-modal-content h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.info-section {
+    margin-bottom: 20px;
+}
+
+.info-section h3 {
+    color: #343F6A;
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+}
+
+.info-section ul {
+    padding-left: 20px;
+}
+
+.info-section li {
+    margin-bottom: 8px;
+}
+
+/* Обновляем стили для room-info */
+.room-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.room-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.room-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.room-price small {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-light);
 }

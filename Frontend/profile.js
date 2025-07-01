@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+    
+    document.getElementById("logoutBtn")?.addEventListener("click", (e) => {
+        e.preventDefault();  
+    
+        localStorage.removeItem('email'); 
+        
+        window.location.href='index.html';  
+        
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         let email = localStorage.getItem("email");
@@ -68,7 +81,7 @@ function renderProfile(guest, reservations) {
                         <span class="date-value">${new Date(reservation.checkOutDate).toLocaleDateString()}</span>
                     </div>
                 </div>
-              <div class="reservation-footer">
+                <div class="reservation-footer">
     <span class="created-at">Создано: ${new Date(reservation.createdAt).toLocaleString()}</span>
     <div class="footer-actions">
         <button class="delete-btn" data-reservation-id="${reservation.id}">

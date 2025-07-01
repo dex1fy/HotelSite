@@ -24,6 +24,7 @@ body {
     line-height: 1.5;
 }
 
+
 .profile-container {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -34,7 +35,7 @@ body {
 }
 
 .profile-card {
-    background: var(--card-bg);
+    background: 96a0cb;
     border-radius: 12px;
     padding: 28px;
     position: sticky;

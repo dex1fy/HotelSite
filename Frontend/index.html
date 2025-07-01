@@ -4,16 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hotel</title>
+    <title>SouthPark Hotel</title>
     <link rel="stylesheet" href="/src/shared/css/main.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script type="module" src="/src/shared/js/forTest.js" defer></script>
     <script type="module" src="/src/pages/registration/registration.js" defer></script>
     <script type="module" src="/src/pages/auth/auth.js" defer></script>
     <script type="module" src="/src/shared/js/forTest.js" defer></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
     <script src="/src/shared/js/main.js"></script>
     <script src="/profile.js" defer></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,15 +28,17 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="/assets/images/Логотип.svg" alt="лого" class="header__logo">
+                <a href="#top">
+                    <img src="/assets/images/Логотип.svg" alt="SouthPark Hotel" class="header__logo">
+                </a>
             </div>
 
             <div class="header__right">
                 <nav class="header__nav">
-                    <a href="#!" class="nav__link">об отеле</a>
-                    <a href="#!" class="nav__link">номера</a>
-                    <a href="#!" class="nav__link">забронировать</a>
-                    <a href="#!" class="nav__link">контакты</a>
+                    <a href="#about" class="nav__link">об отеле</a>
+                    <a href="#rooms" class="nav__link">номера</a>
+                    <a href="#booking" class="nav__link">забронировать</a>
+                    <a href="#contacts" class="nav__link">контакты</a>
                 </nav>
 
                 <a href="/src/pages/auth/LoginPage.html">
@@ -44,40 +53,29 @@
                     </a>
                     <button id="logoutBtn" class="btn">Выйти</button>
                 </div>
-
-
             </div>
         </div>
     </header>
 
     <main class="main">
-        <section class="welcome">
+        <section id="top" class="welcome">
             <div class="container">
                 <div class="welcome__inner__wrapper">
-                    <h2 class="welcome__title"> SouthPark - Ваш дом вдали от дома</h2>
-                    <h3 class="welcome__subtitle">Приветствуем! Hello! Salut! Hola!</h3>
-
-
-                    <p class="description">Наши отели и курорты – это воплощение стиля, современности и инноваций в
-                        сфере
-                        гостеприимства.
-                        Мы создаем пространства, где каждая деталь продумана: от элегантного дизайна до кулинарных
-                        концепций
-                        мирового уровня.
-                        Наши гости наслаждаются не только комфортом, но и уникальными впечатлениями – будь то
-                        захватывающие
-                        мероприятия,
-                        единение с природой или искренняя забота, которая делает каждое путешествие по-настоящему
-                        особенным.
+                    <h2 class="welcome__title">SouthPark - Ваш дом вдали от дома</h2>
+                    <h3 class="welcome__subtitle">Приветствуем! Hello! Salut! Hola!</h3>
+                    <p class="description">
+                        Наши отели и курорты – это воплощение стиля, современности и инноваций в сфере гостеприимства.
+                        Мы создаем пространства, где каждая деталь продумана: от элегантного дизайна до кулинарных концепций
+                        мирового уровня. Наши гости наслаждаются не только комфортом, но и уникальными впечатлениями – будь то
+                        захватывающие мероприятия, единение с природой или искренняя забота, которая делает каждое путешествие
+                        по-настоящему особенным.
                     </p>
-                    <a href="#!"><button type="login" class="btn">узнать больше</button></a>
+                    <a href="#booking"><button type="button" class="btn">забронировать номер</button></a>
                 </div>
-
             </div>
         </section>
 
-
-        <form action="/RoomsPage.html" method="GET" class="date-filters">
+        <form id="booking" action="/RoomsPage.html" method="GET" class="date-filters">
             <div class="filter-group">
                 <label for="checkin-date">Дата заезда</label>
                 <input type="date" id="checkin-date" name="checkin" required />
@@ -92,13 +90,16 @@
             </div>
             <button type="submit" id="filterButton">Найти</button>
         </form>
-        <section class="hotel-info">
+
+        <section id="about" class="hotel-info">
             <div class="hero-container">
                 <img src="/assets/images/info.webp" alt="Фото отеля" class="hero-image">
                 <div class="overlay-card">
                     <h2 class="description1">Уютный трёхэтажный отель с атмосферой домашнего тепла</h2>
-                    <p class="subdescription">На первом этаже вас встретит просторная ресепшен-зона и уютная гостиная с
-                        мягкими диванами. Отдохните после путешествия за чашечкой свежезаваренного кофе.</p>
+                    <p class="subdescription">
+                        На первом этаже вас встретит просторная ресепшен-зона и уютная гостиная с
+                        мягкими диванами. Отдохните после путешествия за чашечкой свежезаваренного кофе.
+                    </p>
 
                     <div class="amenities-section">
                         <h3 class="amenities-title">Наши удобства</h3>
@@ -146,24 +147,26 @@
             </div>
         </section>
 
-        <section class="restoran">
+        <section id="rooms" class="restoran">
             <div class="container">
                 <div class="restoran__img-wrapper">
-                    <img src="/assets/images/ресторан.jpg" alt="" class="restoran__img">
+                    <img src="/assets/images/ресторан.jpg" alt="Ресторан отеля" class="restoran__img">
                 </div>
                 <div class="restoran__text">
-                    <h2 class="restoran__title">Вкус, который становится <span>воспоминанием</span> </h2>
-                    <p class="restoran__desc">Наш шеф-повар превращает каждое блюдо в кулинарный шедевр.
+                    <h2 class="restoran__title">Вкус, который становится <span>воспоминанием</span></h2>
+                    <p class="restoran__desc">
+                        Наш шеф-повар превращает каждое блюдо в кулинарный шедевр.
                         Авторские дегустационные меню, изысканные винные пары и безупречный сервис.
-                        Гастрономическое путешествие, которое запомнится надолго.</p>
-                    <img src="/assets/images/повара.jpg" alt="" class="restoran__pic">
+                        Гастрономическое путешествие, которое запомнится надолго.
+                    </p>
+                    <img src="/assets/images/повара.jpg" alt="Наши повара" class="restoran__pic">
                 </div>
             </div>
         </section>
 
         <div class="slider">
             <div class="container">
-                <h2 class="hotel__title">Моменты, которые хочется сохранить<span> навсегда</span> </h2>
+                <h2 class="hotel__title">Моменты, которые хочется сохранить<span> навсегда</span></h2>
             </div>
             <div class="slides">
                 <div class="slide"><img src="/assets/images/slider1.webp" alt="Slide 1"></div>
@@ -172,45 +175,79 @@
                 <div class="slide"><img src="/assets/images/slider4.jpg" alt="Slide 4"></div>
                 <div class="slide"><img src="/assets/images/slider5.jpeg" alt="Slide 5"></div>
             </div>
-
             <button class="prev" aria-label="Previous slide">&#10094;</button>
             <button class="next" aria-label="Next slide">&#10095;</button>
         </div>
 
-
-
-
-        <div class="map-wrapper">
+        <div id="contacts" class="map-wrapper">
             <div id="map-test" class="map"></div>
         </div>
 
         <footer class="footer">
             <div class="container">
-                <div class="footer__contacts"></div>
-                <img src="/assets/images/Логотип.svg" alt="лого" class="footer__logo">
-                <a class="footer__link footer__link-mail" href="mailto:southparkhotel@mail.ru"
-                    southparkhotel@mail.ru></a>
-                <a href="#!" class="footer__link footer__link-phone">+7 995 463 83 84</a>
-                <i class='bx bxl-instagram'></i>
-                <i class='bx bxl-facebook-circle'></i>
+                <div class="footer__content">
+                    <div class="footer__info">
+                        <img src="/assets/images/Логотип.svg" alt="SouthPark Hotel" class="footer__logo">
+                        <address class="footer__address">
+                            Сиутат-Велья, Барселона, автономное сообщество Каталония
+                        </address>
+                        <div class="footer__social">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class='bx bxl-facebook-circle'></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Telegram">
+                                <i class='bx bxl-telegram'></i>
+                            </a>
+                        </div>
+                        <a href="mailto:southparkhotel@mail.ru" class="footer__email">southparkhotel@mail.ru</a>
+                    </div>
 
-                <nav class="footer__nav">
-                    <ul class="footer__list">
-                        <li class="footer__list-title">Об отеле</li>
-                        <ul class="footer__inner-list">
-                            <li class="footer__list-item"></li>
-                        </ul>
-                        <li class="footer__list-title">Профиль</li>
-                        <li class="footer__list-title">Номера</li>
-                    </ul>
-                </nav>
+                    <div class="footer__columns">
+                        <div class="footer__column">
+                            <h3 class="footer__title">Помощь</h3>
+                            <ul class="footer__list">
+                                <li><a href="#faq" class="footer__link">FAQ</a></li>
+                                <li><a href="#rules" class="footer__link">Правила</a></li>
+                                <li><a href="#privacy" class="footer__link">Конфиденциальность</a></li>
+                                <li><a href="#contacts" class="footer__link">Контакты</a></li>
+                            </ul>
+                        </div>
 
-                <div class="footer__pay"></div>
+                        <div class="footer__column">
+                            <h3 class="footer__title">Номера</h3>
+                            <ul class="footer__list">
+                                <li><a href="#rooms" class="footer__link">Стандарт</a></li>
+                                <li><a href="#rooms" class="footer__link">Люкс</a></li>
+                                <li><a href="#rooms" class="footer__link">Премиум</a></li>
+                                <li><a href="#rooms" class="footer__link">Сьют</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__column">
+                            <h3 class="footer__title">Отель</h3>
+                            <ul class="footer__list">
+                                <li><a href="#about" class="footer__link">О нас</a></li>
+                                <li><a href="#about" class="footer__link">Услуги</a></li>
+                                <li><a href="#about" class="footer__link">Галерея</a></li>
+                                <li><a href="#about" class="footer__link">Отзывы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="footer__payments">
+                        <img src="/assets/images/VIsa__.png" alt="Visa" class="payment-icon">
+                        <img src="/assets/images/mc_vrt_spot_pos-01.png" alt="Mastercard" class="payment-icon">
+                        <img src="/assets/images/mir-logo.png" alt="Мир" class="payment-icon">
+                    </div>
+                    <p class="footer__copyright">© 2023 SouthPark Hotel. Все права защищены.</p>
+                </div>
             </div>
         </footer>
-
-
     </main>
 </body>
-
 </html>

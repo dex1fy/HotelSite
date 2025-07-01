@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xuser\\source\\repos\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {}
+    "C:\\Users\\dexify\\Desktop\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xuser\\source\\repos\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {
+    "C:\\Users\\dexify\\Desktop\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xuser\\source\\repos\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\dexify\\Desktop\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
         "projectName": "HotelAPI",
-        "projectPath": "C:\\Users\\xuser\\source\\repos\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
-        "packagesPath": "C:\\Users\\xuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xuser\\source\\repos\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\obj\\",
+        "projectPath": "C:\\Users\\dexify\\Desktop\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\HotelAPI.csproj",
+        "packagesPath": "C:\\Users\\dexify\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dexify\\Desktop\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\xuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dexify\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
