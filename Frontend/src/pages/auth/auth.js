@@ -23,7 +23,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     } else {
         localStorage.setItem('email', email);
         if(email === "admin@mail.ru"){
-            window.location.href = "../../../AdminPanel.html";
+            window.location.href = "/src/pages/admin/AdminPanel.html";
         }else{
             window.location.href = "../../../index.html";
         }

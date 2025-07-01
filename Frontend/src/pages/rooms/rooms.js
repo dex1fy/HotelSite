@@ -1,35 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Элементы интерфейса
     const loginBtn = document.getElementById("login-btn");
     const logoutBtn = document.getElementById("logoutBtn");
     const authActions = document.getElementById("auth-actions");
 
-    // Проверка авторизации
     const isAuthenticated = localStorage.getItem("email") !== null;
 
-    // Обновление интерфейса
+
     function updateAuthUI() {
         if (isAuthenticated) {
-            // Показываем кнопку выхода и иконку профиля
+
             authActions.style.display = "flex";
             loginBtn.style.display = "none";
         } else {
-            // Показываем кнопку входа
             authActions.style.display = "none";
             loginBtn.style.display = "block";
         }
     }
 
-    // Обработчик кнопки входа
+    
     loginBtn.addEventListener("click", () => {
-        window.location.href = "/src/pages/auth/LoginPage.html"; // Перенаправляем на страницу входа
+        window.location.href = "/src/pages/auth/LoginPage.html"; 
     });
 
-    // Обработчик кнопки выхода
+    
     logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("email");
-        window.location.href = "index.html";
+        window.location.href = "/../../../index.html";
     });
 
     updateAuthUI();
@@ -223,7 +220,6 @@ function renderRooms(rooms) {
         )
         .join("");
 
-    // Добавляем обработчики для кнопок информации
     document.querySelectorAll(".info-btn").forEach((button) => {
         button.addEventListener("click", function () {
             const roomId = this.getAttribute("data-room-id");
@@ -340,7 +336,6 @@ function renderRooms(rooms) {
 
 
 
-    // В конце функции renderRooms добавьте:
     document.querySelectorAll(".info-modal .close").forEach((btn) => {
         btn.addEventListener("click", function () {
             document.getElementById("infoModal").style.display = "none";
@@ -364,15 +359,11 @@ function initRoomSliders() {
         const dotsContainer = container.querySelector(".slider-dots");
         let currentSlide = 0;
 
-        // Инициализация первого слайда
         slides[0].classList.add("active");
 
-        // Создаем точки-индикаторы только если есть больше 1 слайда
-        if (slides.length > 1 && dotsContainer) {
-            // Удаляем старые точки, если есть
-            dotsContainer.innerHTML = "";
 
-            // Создаем новые точки
+        if (slides.length > 1 && dotsContainer) {
+            dotsContainer.innerHTML = "";
             slides.forEach((_, index) => {
                 const dot = document.createElement("div");
                 dot.classList.add("dot");
@@ -382,7 +373,6 @@ function initRoomSliders() {
             });
         }
 
-        // Функция переключения слайда
         function goToSlide(index) {
             slides[currentSlide].classList.remove("active");
             slides[index].classList.add("active");
@@ -397,8 +387,6 @@ function initRoomSliders() {
 
             currentSlide = index;
         }
-
-        // Обработчики для кнопок
         const prevBtn = container.querySelector(".slider-prev");
         const nextBtn = container.querySelector(".slider-next");
 

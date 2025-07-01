@@ -8,8 +8,8 @@
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="/rooms.css" />
-        <script type="module" src="/rooms.js" defer></script>
+        <link rel="stylesheet" href="/src/pages/rooms/rooms.css" />
+        <script type="module" src="/src/pages/rooms/rooms.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script>
             emailjs.init("SNPoWPba0OCafH660"); 
@@ -20,7 +20,7 @@
         <div class="container">
             <div class="date-filters">
                 <div class="logo">
-                    <a href="index.html" class="index-link">
+                    <a href="/../../../index.html" class="index-link">
                         <img
                             src="/assets/images/Логотип.svg"
                             alt="лого"
@@ -64,10 +64,9 @@
                     </button>
                 </div>
 
-                <div class="header-actions">
-                    <!-- Блок для авторизованного пользователя -->
+                <div class="header-actions">       
                     <div class="auth-actions" id="auth-actions">
-                        <a href="Profile.html" class="profile-link">
+                        <a href="/src/pages/profile/Profile.html" class="profile-link">
                             <button id="profile-ico" class="profile-btn">
                                 <i class="bx bx-user"></i>
                             </button>
@@ -75,7 +74,6 @@
                         <button id="logoutBtn" class="right-btn">Выйти</button>
                     </div>
 
-                    <!-- Блок для неавторизованного пользователя -->
                     <button type="button" class="right-btn" id="login-btn">
                         Войти
                     </button>

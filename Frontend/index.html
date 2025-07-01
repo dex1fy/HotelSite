@@ -12,7 +12,7 @@
     <script type="module" src="/src/shared/js/forTest.js" defer></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
     <script src="/src/shared/js/main.js"></script>
-    <script src="/profile.js" defer></script>
+    <script src="/src/pages/profile/profile.js" defer></script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 </a>
 
                 <div class="header-actions">
-                    <a href="Profile.html" class="profile-link">
+                    <a href="/src/pages/profile/Profile.html" class="profile-link">
                         <button id="profile-ico" class="profile-btn">
                             <i class='bx bx-user'></i>
                         </button>
@@ -70,7 +70,7 @@
             </div>
         </section>
 
-        <form id="booking" action="/RoomsPage.html" method="GET" class="date-filters">
+        <form id="booking" action="/src/pages/rooms/RoomsPage.html" method="GET" class="date-filters">
             <div class="filter-group">
                 <label for="checkin-date">Дата заезда</label>
                 <input type="date" id="checkin-date" name="checkin" required />

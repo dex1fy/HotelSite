@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem('email');
-        window.location.href = 'index.html';
+        window.location.href = '/../../../index.html';
     });
 
     updateAuthUI();
