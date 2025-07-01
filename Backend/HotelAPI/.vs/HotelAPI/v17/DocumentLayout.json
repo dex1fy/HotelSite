@@ -50,8 +50,7 @@
               "RelativeToolTip": "HotelAPI\\Models\\DTOs\\AmenityDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T03:54:32.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T03:54:32.95Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "HotelAPI\\Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T23:07:31.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T23:07:31.383Z"
             },
             {
               "$type": "Document",
@@ -122,7 +120,7 @@
               "RelativeDocumentMoniker": "HotelAPI\\Controllers\\RoomsController.cs",
               "ToolTip": "C:\\Users\\dexify\\Desktop\\HotelSite\\Backend\\HotelAPI\\HotelAPI\\Controllers\\RoomsController.cs",
               "RelativeToolTip": "HotelAPI\\Controllers\\RoomsController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCYAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T19:11:45.083Z",
               "EditorCaption": ""

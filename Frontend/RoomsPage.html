@@ -1,94 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Выбор номера</title>
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/rooms.css" />
+        <script type="module" src="/rooms.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+            emailjs.init("SNPoWPba0OCafH660"); 
+        </script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор номера</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/rooms.css">
-    <script type="module" src="/rooms.js" defer></script>
-
-</head>
-
-<body>
-    <div class="container">
-        <div class="date-filters">
-            <div class="logo">
-                <a href="index.html" class="index-link">
-                    <img src="/assets/images/Логотип.svg" alt="лого" class="header__logo">
-                </a>
-            </div>
-
-            <div class="filters-center">
-                <div class="filter-group">
-                    <input type="date" id="checkin-date" name="checkin" required />
-                    <label for="checkin-date">Дата заезда</label>
-                </div>
-                <div class="filter-group">
-                    <input type="date" id="checkout-date" name="checkout" required />
-                    <label for="checkout-date">Дата выезда</label>
-                </div>
-                <div class="filter-group">
-                    <input type="number" id="guests" name="guests" min="1" value="1" required />
-                    <label for="guests">Гости</label>
-                </div>
-                <button type="button" class="btn" id="filterButton">Найти</button>
-            </div>
-
-            <div class="header-actions">
-                <!-- Блок для авторизованного пользователя -->
-                <div class="auth-actions" id="auth-actions">
-                    <a href="Profile.html" class="profile-link">
-                        <button id="profile-ico" class="profile-btn">
-                            <i class='bx bx-user'></i>
-                        </button>
+    <body>
+        <div class="container">
+            <div class="date-filters">
+                <div class="logo">
+                    <a href="index.html" class="index-link">
+                        <img
+                            src="/assets/images/Логотип.svg"
+                            alt="лого"
+                            class="header__logo"
+                        />
                     </a>
-                    <button id="logoutBtn" class="right-btn">Выйти</button>
                 </div>
 
-                <!-- Блок для неавторизованного пользователя -->
-                <button type="button" class="right-btn" id="login-btn">Войти</button>
+                <div class="filters-center">
+                    <div class="filter-group">
+                        <input
+                            type="date"
+                            id="checkin-date"
+                            name="checkin"
+                            required
+                        />
+                        <label for="checkin-date">Дата заезда</label>
+                    </div>
+                    <div class="filter-group">
+                        <input
+                            type="date"
+                            id="checkout-date"
+                            name="checkout"
+                            required
+                        />
+                        <label for="checkout-date">Дата выезда</label>
+                    </div>
+                    <div class="filter-group">
+                        <input
+                            type="number"
+                            id="guests"
+                            name="guests"
+                            min="1"
+                            value="1"
+                            required
+                        />
+                        <label for="guests">Гости</label>
+                    </div>
+                    <button type="button" class="btn" id="filterButton">
+                        Найти
+                    </button>
+                </div>
+
+                <div class="header-actions">
+                    <!-- Блок для авторизованного пользователя -->
+                    <div class="auth-actions" id="auth-actions">
+                        <a href="Profile.html" class="profile-link">
+                            <button id="profile-ico" class="profile-btn">
+                                <i class="bx bx-user"></i>
+                            </button>
+                        </a>
+                        <button id="logoutBtn" class="right-btn">Выйти</button>
+                    </div>
+
+                    <!-- Блок для неавторизованного пользователя -->
+                    <button type="button" class="right-btn" id="login-btn">
+                        Войти
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div id="roomsContainer" class="row"></div>
 
 
-
-    <div id="roomsContainer" class="row"></div>
-
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Подтверждение бронирования</h2>
-            <div id="modalContent">
-                <p><strong>Номер комнаты:</strong> <span id="modalRoomNumber"></span></p>
-                <p><strong>Дата заезда:</strong> <span id="modalCheckin"></span></p>
-                <p><strong>Дата отъезда:</strong> <span id="modalCheckout"></span></p>
-                <p><strong>Количество гостей:</strong> <span id="modalGuests"></span></p>
-            </div>
-            <button id="confirmBooking" class="confirmBooking">Подтвердить бронирование</button>
-        </div>
-    </div>
-
-
-    <div id="infoModal" class="info-modal">
-        <div class="info-modal-content">
-            <span class="close">&times;</span>
-            <h2>Информация о номере <span id="infoRoomNumber"></span></h2>
-
-            <div class="info-section">
-                <h3>Описание</h3>
-                <p id="infoDescription"></p>
-            </div>
-
-            <div class="info-section">
-                <h3>Удобства</h3>
-                <ul id="infoAmenities"></ul>
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Подтверждение бронирования</h2>
+                <div id="modalContent">
+                    <p>
+                        <strong>Номер комнаты:</strong>
+                        <span id="modalRoomNumber"></span>
+                    </p>
+                    <p>
+                        <strong>Дата заезда:</strong>
+                        <span id="modalCheckin"></span>
+                    </p>
+                    <p>
+                        <strong>Дата отъезда:</strong>
+                        <span id="modalCheckout"></span>
+                    </p>
+                    <p>
+                        <strong>Количество гостей:</strong>
+                        <span id="modalGuests"></span>
+                    </p>
+                </div>
+                <button id="confirmBooking" class="confirmBooking">
+                    Подтвердить бронирование
+                </button>
             </div>
         </div>
-    </div>
 
-</body>
+        <div id="infoModal" class="info-modal">
+            <div class="info-modal-content">
+                <span class="close">&times;</span>
+                <h2>Информация о номере <span id="infoRoomNumber"></span></h2>
 
+                <div class="info-section">
+                    <h3>Описание</h3>
+                    <p id="infoDescription"></p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Удобства</h3>
+                    <ul id="infoAmenities"></ul>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

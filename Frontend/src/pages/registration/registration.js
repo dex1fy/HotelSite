@@ -1,7 +1,6 @@
 document.getElementById('registration-form').addEventListener('submit', async (e) => {
-    e.preventDefault(); // страница не перезагрузится 
+    e.preventDefault(); 
 
-    // поля для регистрации
     const form = document.getElementById('registration-form')
     const email = document.getElementById('email')
     const password = document.getElementById('password')
@@ -10,7 +9,6 @@ document.getElementById('registration-form').addEventListener('submit', async (e
 
     const data = { email: email.value, password: password.value, confirmPassword: confirmPassword.value, name: name.value }
 
-    // отправка запроса на авторизацию на бекенд
     let response = await fetch('http://localhost:5291/api/Authentication/RegisterGuest', {
         method: 'POST',
         headers: {
@@ -22,7 +20,7 @@ document.getElementById('registration-form').addEventListener('submit', async (e
     let err;
     if(response.ok){
         localStorage.setItem('email', email.value);
-        window.location.href = "../../../index.html"; // переход на главную страницу при успешной регистрации
+        window.location.href = "../../../index.html"; 
     }
     else{
         err = await response.json();

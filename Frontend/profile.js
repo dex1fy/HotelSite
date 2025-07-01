@@ -58,7 +58,6 @@ function renderProfile(guest, reservations) {
         return;
     }
 
-    // Генерация HTML для бронирований (карточки)
     let reservationsHtml = '';
     if (reservations && reservations.length > 0) {
         reservationsHtml = `
@@ -104,7 +103,6 @@ function renderProfile(guest, reservations) {
         `;
     }
 
-    // Основная структура страницы
     container.innerHTML = `
         <div class="profile-container">
             <div class="profile-card">
