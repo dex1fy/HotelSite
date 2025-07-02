@@ -413,6 +413,7 @@ section {
     height: 80vh;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 
 .hotel__title {
@@ -725,4 +726,11 @@ section {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     font-family: 'Montserrat';
+}
+
+.descriptionMap{
+    font-family: "Montserrat";
+    margin-bottom: 50px;
+    color: black;
+    font-size: 24px;
 }
