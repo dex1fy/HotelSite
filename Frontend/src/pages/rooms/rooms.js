@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+
     loginBtn.addEventListener("click", () => {
-        window.location.href = "/src/pages/auth/LoginPage.html"; 
+        window.location.href = "/src/pages/auth/LoginPage.html";
     });
 
-    
+
     logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("email");
@@ -156,24 +156,21 @@ function renderRooms(rooms) {
           <div class="col-md-4 col-sm-6 mb-4">
                 <div class="room-card">
                     <div class="room-slider">
-                      ${
-                          room.images.length > 0
-                              ? `
+                      ${room.images.length > 0
+                    ? `
                         <div class="slider-container">
                           ${room.images
-                              .map(
-                                  (image, index) => `
+                        .map(
+                            (image, index) => `
                         <div class="slide ${index === 0 ? "active" : ""}">
-                            <img src="${image}" alt="Номер ${
-                                      room.roomNumber
-                                  }" loading="lazy">
+                            <img src="${image}" alt="Номер ${room.roomNumber
+                                }" loading="lazy">
                         </div>
                       `
-                              )
-                              .join("")}
+                        )
+                        .join("")}
           
-                ${
-                    room.images.length > 1
+                ${room.images.length > 1
                         ? `
                   <div class="slider-controls">
                       <button class="slider-prev">&lt;</button>
@@ -182,13 +179,13 @@ function renderRooms(rooms) {
                   <div class="slider-dots"></div>
           `
                         : ""
-                }
+                    }
       </div>
       `
-                              : `
+                    : `
         <div class="no-image">Нет изображения</div>
       `
-                      }
+                }
     </div>
 
     <div class="room-info">
@@ -207,9 +204,8 @@ function renderRooms(rooms) {
         <div class="room-price">
           <span>${room.price} Р</span>
         </div>
-        <button class="book-btn" data-room-id="${room.id}" data-room-number="${
-                room.roomNumber
-            }">
+        <button class="book-btn" data-room-id="${room.id}" data-room-number="${room.roomNumber
+                }">
           Забронировать
         </button>
       </div>
@@ -236,12 +232,31 @@ function renderRooms(rooms) {
                 amenitiesList.innerHTML =
                     room.amenities && room.amenities.length > 0
                         ? room.amenities
-                              .map((a) => `<li>${a.name}</li>`)
-                              .join("")
+                            .map((a) => `<li>${a.name}</li>`)
+                            .join("")
                         : "<li>Нет информации об удобствах</li>";
 
                 document.getElementById("infoModal").style.display = "block";
             }
+        });
+
+        document.querySelectorAll('.book-btn').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Проверяем, авторизован ли пользователь (например, по наличию email в localStorage)
+                const isLoggedIn = localStorage.getItem('email') !== null;
+
+                if (!isLoggedIn) {
+                    // Если не авторизован - перенаправляем на страницу входа
+                    window.location.href = '/src/pages/auth/LoginPage.html'; 
+                } else {
+                    // Если авторизован - выполняем действие бронирования
+                    const roomId = this.getAttribute('data-room-id');
+                    const roomNumber = this.getAttribute('data-room-number');
+                    bookRoom(roomId, roomNumber); // Ваша функция бронирования
+                }
+            });
         });
     });
 
